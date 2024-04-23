@@ -1,0 +1,38 @@
+[
+  {
+    "remote": "github",
+    "branch": "udc-sm8450",
+    "repository": "SonalSingh18/android_hardware_oplus",
+    "target_path": "hardware/oplus"
+  },
+  {
+    "remote": "github",
+    "branch": "14",
+    "repository": "opudon/hardware_dolby",
+    "target_path": "hardware/dolby"
+  },
+  {
+    "remote": "github",
+    "branch": "udc",
+    "repository": "SonalSingh18/android_kernel_oneplus_sm8450",
+    "target_path": "kernel/oneplus/sm8450"
+  },
+  {
+    "remote": "github",
+    "repository": "opudon/android_kernel_oneplus_sm8450-devicetrees",
+    "branch": "14",
+    "target_path": "kernel/oneplus/sm8450-devicetrees"
+  },
+  {
+    "remote": "github",
+    "repository": "opudon/android_kernel_oneplus_sm8450-modules",
+    "branch": "14",
+    "target_path": "kernel/oneplus/sm8450-modules"
+  },
+  {
+    "remote": "gitlab",
+    "repository": "maitreyapatni25/vendor_oneplus_sm8450-common",
+    "branch": "14",
+    "target_path": "vendor/oneplus/sm8450-common"
+  }
+]

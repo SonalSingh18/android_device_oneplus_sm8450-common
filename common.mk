@@ -352,6 +352,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml
 
+# OmniJaws
+PRODUCT_PACKAGES += \
+    OmniJaws
+
 # OMX
 PRODUCT_PACKAGES += \
     libOmxCore \
@@ -404,6 +408,10 @@ PRODUCT_PACKAGES += \
 # QTI service tracker
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.servicetracker@1.2.vendor
+
+# RemovePackages
+PRODUCT_PACKAGES += \
+    RemovePackages
 
 # RIL
 PRODUCT_PACKAGES += \
@@ -498,6 +506,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hidl.memory.block@1.0.vendor \
     vendor.qti.hardware.systemhelper@1.0.vendor
+
+# UDFPS
+TARGET_HAS_UDFPS := true
 
 # Update engine
 PRODUCT_PACKAGES += \
