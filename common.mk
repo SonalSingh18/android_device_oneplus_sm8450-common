@@ -169,7 +169,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
 
 # Dolby
-$(call inherit-product, hardware/dolby/dolby.mk)
+#$(call inherit-product, hardware/dolby/dolby.mk)
 
 # Doze
 PRODUCT_PACKAGES += \
@@ -366,7 +366,8 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, hardware/oplus/overlay/qssi/qssi.mk)
 
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-lineage \
+    $(LOCAL_PATH)/overlay-crdroid
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
@@ -404,6 +405,12 @@ PRODUCT_PACKAGES += \
 # QTI service tracker
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.servicetracker@1.2.vendor
+
+# RemovePackages
+ifeq ($(WITH_GMS),true)
+PRODUCT_PACKAGES += \
+    RemovePackages
+endif
 
 # RIL
 PRODUCT_PACKAGES += \
@@ -498,6 +505,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hidl.memory.block@1.0.vendor \
     vendor.qti.hardware.systemhelper@1.0.vendor
+
+# UDFPS
+TARGET_HAS_UDFPS := true
 
 # Update engine
 PRODUCT_PACKAGES += \
